@@ -1,3 +1,5 @@
+import 'dart:math';
+
 // Factory Method Pattern
 // Define an interface for creating an object, but let subclasses decide which class to instantiate.
 
@@ -53,7 +55,9 @@ void main() {
 
   // Choose a concrete creator at runtime (e.g., based on config or platform)
   Dialog dialog;
-  final isMac = false; // flip to true to simulate macOS
+  final isMac = Random().nextBool(); // random boolean to simulate different behaviours.
+
+  print("isMac : $isMac");
 
   if (isMac) {
     dialog = MacDialog();
