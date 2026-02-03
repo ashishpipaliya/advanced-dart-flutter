@@ -41,6 +41,7 @@ A comprehensive guide to design patterns, SOLID principles, OOP fundamentals, ar
 | [Encapsulation](OOP/Encapsulation) | Hide state, expose behavior |
 | [Abstraction](OOP/Abstraction) | Simplified interface to complexity |
 | [Interfaces](OOP/Interfaces) | Contracts implemented by classes |
+| [Mixin](OOP/Mixin) | Reusability |
 
 ### Architectural Patterns
 - MVC
