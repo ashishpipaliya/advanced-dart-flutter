@@ -20,13 +20,13 @@ A comprehensive guide to design patterns, SOLID principles, OOP fundamentals, ar
 
 | Pattern | Category |
 |---------|----------|
-| [Singleton](Design%20patterns/Singleton/README.md) | Creational |
-| [Factory Method](Design%20patterns/Factory%20Method/README.md) | Creational |
-| [Builder](Design%20patterns/Builder/README.md) | Creational |
-| [Adapter](Design%20patterns/Adapter/README.md) | Structural |
-| [Strategy](Design%20patterns/Strategy/README.md) | Behavioral |
-| [Observer](Design%20patterns/Observer/README.md) | Behavioral |
-| [State](Design%20patterns/State/README.md) | Behavioral |
+| [Singleton](Design%20patterns/Singleton) | Creational |
+| [Factory Method](Design%20patterns/Factory%20Method) | Creational |
+| [Builder](Design%20patterns/Builder) | Creational |
+| [Adapter](Design%20patterns/Adapter) | Structural |
+| [Strategy](Design%20patterns/Strategy) | Behavioral |
+| [Observer](Design%20patterns/Observer) | Behavioral |
+| [State](Design%20patterns/State) | Behavioral |
 
 ---
 
@@ -35,35 +35,12 @@ A comprehensive guide to design patterns, SOLID principles, OOP fundamentals, ar
 ### OOP Fundamentals
 | Concept | Description |
 |---------|-------------|
-| [Classes & Objects](OOP/Classes%20%26%20Objects/README.md) | Blueprints and instances (examples) |
-| [Inheritance](OOP/Inheritance/README.md) | Reuse and specialize behavior |
-| [Polymorphism](OOP/Polymorphism/README.md) | Multiple types, same interface |
-| [Encapsulation](OOP/Encapsulation/README.md) | Hide state, expose behavior |
-| [Abstraction](OOP/Abstraction/README.md) | Simplified interface to complexity |
-| [Interfaces](OOP/Interfaces/README.md) | Contracts implemented by classes |
-
-### Design Patterns
-**Creational:**
-- Factory Method
-- Builder
-
-**Structural:**
-- Adapter
-- Decorator
-- Facade
-- Proxy
-- Bridge
-- Composite
-
-**Behavioral:**
-- Observer
-- State
-- Strategy
-- Template Method
-- Chain of Responsibility
-- Mediator
-- Visitor
-- Command
+| [Classes & Objects](OOP/Classes%20%26%20Objects) | Blueprints and instances (examples) |
+| [Inheritance](OOP/Inheritance) | Reuse and specialize behavior |
+| [Polymorphism](OOP/Polymorphism) | Multiple types, same interface |
+| [Encapsulation](OOP/Encapsulation) | Hide state, expose behavior |
+| [Abstraction](OOP/Abstraction) | Simplified interface to complexity |
+| [Interfaces](OOP/Interfaces) | Contracts implemented by classes |
 
 ### Architectural Patterns
 - MVC
@@ -71,12 +48,6 @@ A comprehensive guide to design patterns, SOLID principles, OOP fundamentals, ar
 - MVVM
 - BLoC
 - Clean Architecture
-
-### Concurrency Patterns
-- Futures
-- Streams
-- Async/Await
-- Isolates
 
 ### Testing Best Practices
 - Unit Testing
