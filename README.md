@@ -21,17 +21,26 @@ A comprehensive guide to design patterns, SOLID principles, OOP fundamentals, ar
 | Pattern | Category |
 |---------|----------|
 | [Singleton](Design%20patterns/Singleton/README.md) | Creational |
+| [Factory Method](Design%20patterns/Factory%20Method/README.md) | Creational |
+| [Builder](Design%20patterns/Builder/README.md) | Creational |
+| [Adapter](Design%20patterns/Adapter/README.md) | Structural |
+| [Strategy](Design%20patterns/Strategy/README.md) | Behavioral |
+| [Observer](Design%20patterns/Observer/README.md) | Behavioral |
+| [State](Design%20patterns/State/README.md) | Behavioral |
 
 ---
 
 ## 📋 Coming Soon
 
 ### OOP Fundamentals
-- Classes & Objects
-- Inheritance
-- Polymorphism
-- Encapsulation
-- Abstraction
+| Concept | Description |
+|---------|-------------|
+| [Classes & Objects](OOP/Classes%20%26%20Objects/README.md) | Blueprints and instances (examples) |
+| [Inheritance](OOP/Inheritance/README.md) | Reuse and specialize behavior |
+| [Polymorphism](OOP/Polymorphism/README.md) | Multiple types, same interface |
+| [Encapsulation](OOP/Encapsulation/README.md) | Hide state, expose behavior |
+| [Abstraction](OOP/Abstraction/README.md) | Simplified interface to complexity |
+| [Interfaces](OOP/Interfaces/README.md) | Contracts implemented by classes |
 
 ### Design Patterns
 **Creational:**
