@@ -1,111 +1,90 @@
 // Liskov Substitution Principle (LSP)
-// Example using vehicles: show a BAD design that forces all vehicles to refuel,
-// and a GOOD design that separates fuel and electric responsibilities.
+// Example: Sparrow vs Penguin (Interface implementation)
 
-// ----------------
-// ❌ BAD design
-// ----------------
-abstract class Vehicle {
-  void refuel();
-  void move();
+// ------------------------------------------
+// ❌ Example of LSP Violation (Wrong Way)
+// ------------------------------------------
+
+abstract class BirdBad {
+  void fly();
 }
 
-class ElectricCarBad extends Vehicle {
+class SparrowBad implements BirdBad {
   @override
-  void refuel() {
-    // Electric car forced to implement refuel() — maps to charging.
-    // This mixes responsibilities and can be confusing for clients.
-    print('Charging the battery...');
-  }
-
-  @override
-  void move() {
-    print('ElectricCar moves');
+  void fly() {
+    print("Flying...");
   }
 }
 
-class PetrolCarBad extends Vehicle {
+class PenguinBad implements BirdBad {
   @override
-  void refuel() {
-    print('Refilling the petrol...');
-  }
-
-  @override
-  void move() {
-    print('PetrolCar moves');
+  void fly() {
+    // ❌ Violation: Penguin is a bird, but it cannot fly!
+    // Throwing an exception breaks the behavior expected for a Bird.
+    throw Exception("Penguins can't fly!");
   }
 }
 
-// Service expects every Vehicle to be refuelable — this is fragile.
-void serviceVehicleBad(Vehicle vehicle) {
-  vehicle.refuel();
-  // other servicing steps
+// Function expects any Bird to be able to fly
+void makeBirdFlyBad(BirdBad bird) {
+  bird.fly();
 }
 
-// ----------------
-// ✅ GOOD design
-// ----------------
-abstract class BaseVehicle {
-  void move();
+// ------------------------------------------
+// ✅ Correct Way (Follow LSP)
+// ------------------------------------------
+
+abstract class Bird {}
+
+abstract class FlyingBird implements Bird {
+  void fly();
 }
 
-abstract class FuelVehicle implements BaseVehicle {
-  void refuel();
-}
-
-abstract class ElectricVehicle implements BaseVehicle {
-  void charge();
-}
-
-class ElectricCar implements ElectricVehicle {
+class Sparrow implements FlyingBird {
   @override
-  void charge() {
-    print('Charging the battery...');
-  }
-
-  @override
-  void move() {
-    print('ElectricCar moves');
+  void fly() {
+    print("Sparrow flying");
   }
 }
 
-class PetrolCar implements FuelVehicle {
-  @override
-  void refuel() {
-    print('Refilling the petrol...');
-  }
-
-  @override
-  void move() {
-    print('PetrolCar moves');
-  }
+class Penguin implements Bird {
+  // Penguins are Birds but not FlyingBirds
 }
 
-void serviceFuelVehicle(FuelVehicle v) {
-  v.refuel();
-  // other fuel-specific service
+void makeBirdFlyGood(FlyingBird bird) {
+  bird.fly();
 }
 
-void serviceElectricVehicle(ElectricVehicle v) {
-  v.charge();
-  // other electric-specific service
-}
+// ------------------------------------------
+// 🚀 Demonstration
+// ------------------------------------------
 
 void main() {
-  print('=== Liskov Substitution Principle (Vehicle example) ===\\n');
+  print('=== Liskov Substitution Principle (LSP) ===\n');
 
-  print('❌ BAD: serviceVehicleBad assumes every Vehicle has refuel()');
-  final eBad = ElectricCarBad();
-  final pBad = PetrolCarBad();
-  serviceVehicleBad(pBad); // ok for petrol
-  serviceVehicleBad(eBad); // works, but mixes concepts (charging as refuel)
+  print('❌ WRONG WAY:');
+  final sparrowBad = SparrowBad();
+  final penguinBad = PenguinBad();
 
-  print('\\n✅ GOOD: Separate contracts for fuel vs electric');
-  final e = ElectricCar();
-  final p = PetrolCar();
-  serviceElectricVehicle(e);
-  serviceFuelVehicle(p);
+  makeBirdFlyBad(sparrowBad); // Works
+  try {
+    print('Trying to make Penguin fly...');
+    makeBirdFlyBad(penguinBad); // Now directly passing as it implements BirdBad
+  } catch (e) {
+    print('💥 App crashed: $e');
+  }
 
-  print("\\n📌 Key LSP rule: Subtypes must honor the parent's contract.");
-  print("If a subtype cannot fulfill a parent's contract, don\'t inherit from it.");
+  print('\n✅ CORRECT WAY:');
+  final sparrow = Sparrow();
+  final penguin = Penguin();
+
+  makeBirdFlyGood(sparrow); // Works safely
+
+  // makeBirdFlyGood(penguin);
+  // 🛑 Compiler Error! This prevents the crash before it happens.
+  print('Penguin instance (${penguin.runtimeType}) created safe from fly() expectations.');
+
+  print('\n✔ No crashes');
+  print('✔ Clean architecture');
+  print('✔ Safer polymorphism');
 }
