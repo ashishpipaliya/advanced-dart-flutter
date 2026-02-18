@@ -40,13 +40,22 @@ A comprehensive guide to design patterns, SOLID principles, OOP fundamentals, ar
 | [Interfaces](OOP/Interfaces) | Contracts implemented by classes |
 | [Mixin](OOP/Mixin) | Reusability |
 
+### Architectural Patterns
+
+| Pattern | Description |
+|---------|-------------|
+| [MVVM](Architectural%20patterns) | Model-View-ViewModel architecture |
+| [Clean Architecture](Architectural%20patterns) | Layered architecture for scalability |
+
+---
+
+### 💡 Interview Prep
+
+- [Flutter Interview Questions](Interview%20questions/readme.md)
+
 ---
 
 ## 📋 Coming Soon
-
-### Architectural Patterns
-- MVVM
-- Clean Architecture
 
 ### Testing Best Practices
 - Unit Testing
