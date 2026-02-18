@@ -28,11 +28,8 @@ A comprehensive guide to design patterns, SOLID principles, OOP fundamentals, ar
 | [Observer](Design%20patterns/Observer) | Behavioral |
 | [State](Design%20patterns/State) | Behavioral |
 
----
-
-## 📋 Coming Soon
-
 ### OOP Fundamentals
+
 | Concept | Description |
 |---------|-------------|
 | [Classes & Objects](OOP/Classes%20%26%20Objects) | Blueprints and instances (examples) |
@@ -43,23 +40,19 @@ A comprehensive guide to design patterns, SOLID principles, OOP fundamentals, ar
 | [Interfaces](OOP/Interfaces) | Contracts implemented by classes |
 | [Mixin](OOP/Mixin) | Reusability |
 
+---
+
+## 📋 Coming Soon
+
 ### Architectural Patterns
-- MVC
-- MVP
 - MVVM
-- BLoC
 - Clean Architecture
 
 ### Testing Best Practices
 - Unit Testing
 - Widget Testing
+- Integration Testing
 - Mocking & Stubbing
-
-### Functional Programming
-- Higher-order Functions
-- Map, Filter, Reduce
-- Function Composition
-- Immutability
 
 ---
 
